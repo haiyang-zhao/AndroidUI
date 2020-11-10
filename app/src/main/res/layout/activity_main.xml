@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaccbb"
+    tools:context=".MainActivity">
+
+
+    <com.zhy.androidui.MyViewGroup
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="50dp"
+        android:background="#aabbcc"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.zhy.androidui.MyViewGroup2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp"
+            android:background="#aaffdd"
+            android:orientation="vertical">
+
+            <com.zhy.androidui.MyTextView
+                android:id="@+id/tv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="Test Event"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </com.zhy.androidui.MyViewGroup2>
+
+    </com.zhy.androidui.MyViewGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

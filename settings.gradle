@@ -1,0 +1,4 @@
+include ':textdraw'
+include ':eventconflict'
+include ':app'
+rootProject.name = "AndroidUI"

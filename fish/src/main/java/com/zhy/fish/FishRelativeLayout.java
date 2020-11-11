@@ -6,7 +6,6 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
@@ -18,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.RequiresApi;
+
+import java.util.Random;
 
 public class FishRelativeLayout extends RelativeLayout {
 
@@ -124,6 +125,14 @@ public class FishRelativeLayout extends RelativeLayout {
             public void onAnimationStart(Animator animation) {
                 super.onAnimationStart(animation);
                 fishDrawable.setFrequence(3f);
+
+
+                // 摆动鱼鳍
+                ObjectAnimator finsAnimator = ObjectAnimator.ofFloat(fishDrawable,
+                        "finsValue", 0, fishDrawable.getHEAD_RADIUS() * 2, 0);
+                finsAnimator.setRepeatCount(new Random().nextInt(4));
+                finsAnimator.setDuration((new Random().nextInt(1) + 1) * 500);
+                finsAnimator.start();
             }
         });
 
@@ -149,9 +158,10 @@ public class FishRelativeLayout extends RelativeLayout {
      * 利用向量的夹角公式计算夹角
      * cosAOB = (OA*OB)/(|OA|*|OB|)
      * 其中OA*OB是向量的数量积OA=(Ax-Ox,Ay-Oy) OB=(Bx-Ox,By-Oy),OA*OB=(Ax-Ox)*(Bx-Ox)+(Ay-Oy)*(By-Oy)
-     * @param O  顶点 O
-     * @param A  点1 A
-     * @param B  点2 B
+     *
+     * @param O 顶点 O
+     * @param A 点1 A
+     * @param B 点2 B
      * @return
      */
     public float includeAngle(PointF O, PointF A, PointF B) {

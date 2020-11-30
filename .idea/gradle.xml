@@ -15,9 +15,12 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/eventconflict" />
             <option value="$PROJECT_DIR$/fish" />
+            <option value="$PROJECT_DIR$/materialdesign" />
             <option value="$PROJECT_DIR$/recycler" />
             <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/textdraw" />
+            <option value="$PROJECT_DIR$/viewpager_lazyload" />
+            <option value="$PROJECT_DIR$/viewpager_lazyload/vp_init" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

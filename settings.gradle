@@ -1,3 +1,6 @@
+include ':materialdesign'
+include ':viewpager_lazyload:vp_init'
+include ':viewpager_lazyload'
 include ':recycler'
 include ':recyclerview'
 include ':fish'
